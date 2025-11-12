@@ -4,7 +4,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
  
 function Navication() {
-    const menulist = [{ id: 1, title: 'Features' , link: '/features'}, { id: 2, title: 'Community' , link: '/community'},{ id: 3, title: 'How it work' , link: '/howitwork'}, {id:4, title: 'Pricing' , link: '/pricing '} ]; 
+    const menulist = [{ id: 1, title: 'Features' , link: '/features'}, { id: 2, title: 'Community' , link: '/community'},{ id: 3, title: 'How it work' , link: '/howitwork'}, {id:4, title: 'Pricing' , link: '/pricing'} ]; 
     const pathname = usePathname();
     return(
      <>

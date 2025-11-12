@@ -43,6 +43,9 @@ export default function RootLayout({ children }) {
           .text-sub-paara{
              font-family: ${beVietnamPro.style.fontFamily};
           }
+          .banner-div h2.main-heading{
+             font-family: ${openSans.style.fontFamily};
+          }
           `}
         </style>
       </Head>

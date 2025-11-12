@@ -1,7 +1,10 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
  
 function MobileMenus() {
+   const pathname = usePathname();
     const menulist = [{ id: 1, icons: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +32,7 @@ function MobileMenus() {
               <ul className="navbar-nav d-flex align-items-start mb-lg-0">
                     {menulist.map((type) => (
                         <li className="nav-item" key={type.id}>
-                            <Link className="nav-link text-center"  href={type.link}> 
+                            <Link className={`nav-link text-center ${pathname === type.link ? "active" : ""}`} href={type.link}> 
                             <strong className="d-block mb-1"> {type.icons} </strong> {type.title} </Link>
                         </li>
                         ))}

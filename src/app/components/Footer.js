@@ -9,7 +9,7 @@ function Footer() {
             <section className="full-bg-footer">
                 
                 <div className="container">
-                    <div className="row row-cols-1 row-cols-lg-3">
+                    <div className="row row-cols-1 row-cols-lg-3 gy-4 gy-lg-0">
                         <div className="col">
                             <div className="comons-footes">
                               <Link href="/" className="footers-logos">

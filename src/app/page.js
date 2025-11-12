@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import HomeBanner from './components/HomeBanner';
 import Link from 'next/link';
 import MobileMenus from './components/MobileMenus';
+import SignupModal from './components/SignupModal';
 
 export default function Home() {
   const coreset = [
@@ -42,7 +43,7 @@ export default function Home() {
                 Couple & Partner Support, Al Predictive Personalization, and
                  Evidence-Based Content. </p>
 
-              <div className="row cores-div core-card-row row-cols-1 row-cols-lg-3 gy-4 mt-0">
+              <div className="row cores-div core-card-row row-cols-1 row-cols-sm-2 row-cols-lg-3 gy-4 mt-0">
                   {coreset.map((type) => (
                       <div className='col' key={type.id}>
                           <div className="comon-core-cards align-items-center w-100">
@@ -285,6 +286,7 @@ export default function Home() {
 
       <Footer/>
       <MobileMenus/>
+      <SignupModal/>
    
     </>
   )

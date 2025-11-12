@@ -18,7 +18,7 @@ export default function Features() {
           <div className="container">
                <h2 className="text-center mt-2 main-heading col-lg-7 mx-auto body-main-heading"> Everything you need to feel supported </h2>
                <p className="text-center text-sub-paara col-lg-8 mx-auto mt-2"> Mood tracking, smart recipes, men’s support guides, and gentle habit gamification. </p>
-               <div className="row col-lg-11 mx-auto row-cols-1 row-cols-lg-2 gx-lg-5 mt-0 gy-lg-5">
+               <div className="row col-lg-11 mx-auto row-cols-1 row-cols-lg-2 gx-lg-5 mt-0 gy-4 gy-lg-5">
                  <div className="col">
                     <div className="comons-modas d-inline-block coui-text015 w-100">
                         <div className="d-flex align-items-center">
