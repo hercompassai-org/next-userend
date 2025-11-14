@@ -952,6 +952,16 @@ div.tags-bg015 {
 .cs-plans01{
   width: 33%;
 }
+.feauters-divu01 th{
+  width: 30%;
+}
+.btn-gets-strtad {
+    background: #9b8bf0 !important;
+    color: #fff !important;
+    padding: 10px 25px !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+}
 @media(max-width:910px){
  .navbar>.container{
      flex-wrap: wrap;
