@@ -22,6 +22,7 @@ export default function Dashboard() {
 
    const saveLog = async () => {
       const userId = localStorage.getItem("userId");
+      const token = localStorage.getItem("token");
       if (!userId) {
          alert("User not logged in");
          return;
@@ -36,7 +37,8 @@ export default function Dashboard() {
          setLoading(true);
          const response = await fetch("https://hercompass.onrender.com/api/logs/add", {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
+            headers: { "Content-Type": "application/json","Authorization": `Bearer ${token}` },
+
             body: JSON.stringify({
                mood,
                symptom,
