@@ -1184,3 +1184,30 @@ div.tags-bg015 {
    
     
 }
+/* abu */
+.modes {
+  padding: 8px 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-right: 6px;
+}
+
+.modes.active {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+/* Symptoms list */
+.selcts-list li {
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+
+.selcts-list li.active {
+  background-color: #ff66a3; /* pink or your brand color */
+  color: #fff;
+  border-color: #ff66a3;
+}
