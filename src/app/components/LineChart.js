@@ -33,7 +33,7 @@ ChartJS.register(
 
 const LineChart = ({ data }) => {
 
-  // If data not loaded yet, use placeholders
+
   const moodValues =
     data?.predictions?.map(p => p.feature_vector?.avg_mood ?? null) || [12, 19, 8, 15, 22, 30, 28];
 
@@ -45,7 +45,7 @@ const LineChart = ({ data }) => {
       new Date(p.created_at).toLocaleDateString("en-US", { month: "short", day: "numeric" })
     ) || ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"];
 
-  // Chart dataset
+
   const chartData = {
     labels,
     datasets: [
@@ -68,7 +68,6 @@ const LineChart = ({ data }) => {
     ],
   };
 
-  // Chart options
   const options = {
     responsive: true,
     plugins: {

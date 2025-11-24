@@ -20,20 +20,30 @@ import {
 ChartJS.register(LinearScale, PointElement, Tooltip, Legend, Title);
 
 const BubbleChart = ({ data }) => {
-  if (!data) return <p>Loading...</p>;
-  if (data.length === 0) return <p>No prediction data.</p>;
+  
 
-  const dataset = data.map(item => ({
-    x: item.feature_vector.sleep_hours,
-    y: item.feature_vector.mood,
-    r: item.feature_vector.energy_level * 4
-  }));
+  const bubblePoints = data?.predictions
+    ?.filter(p => p.feature_vector?.avg_sleep && p.feature_vector?.avg_mood)
+    ?.map(p => ({
+      x: p.feature_vector.avg_sleep, 
+      y: p.feature_vector.avg_mood,
+      r: Math.abs(
+        p.predicted_symptoms?.hot_flashes ??
+        p.predicted_symptoms?.mood_drop_risk ??
+        10
+      ) * 10,
+    })) || [
+
+      { x: 10, y: 20, r: 15 },
+      { x: 25, y: 10, r: 10 },
+      { x: 15, y: 25, r: 20 },
+    ];
 
   const chartData = {
     datasets: [
       {
         label: 'Sleep vs Mood',
-        data: dataset,
+        data: bubblePoints,
         backgroundColor: 'rgba(75, 192, 192, 0.6)',
       }
     ],
@@ -41,13 +51,21 @@ const BubbleChart = ({ data }) => {
 
   const options = {
     responsive: true,
+    plugins: {
+      legend: { position: 'top' },
+      title: { display: true, text: '' },
+    },
     scales: {
-      x: { title: { text: "Sleep Hours", display: true } },
-      y: { title: { text: "Mood Level", display: true } }
-    }
+      x: { beginAtZero: true, title: { display: true, text: 'Sleep (hrs)' } },
+      y: { beginAtZero: true, title: { display: true, text: 'Mood Level' } },
+    },
   };
 
-  return <Bubble data={chartData} options={options} />;
+  return (
+    <div style={{ width: '80%', margin: 'auto' }}>
+      <Bubble data={chartData} options={options} />
+    </div>
+  );
 };
 
 export default BubbleChart;
