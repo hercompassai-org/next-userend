@@ -84,7 +84,7 @@ export default function Symptom() {
 
                                     <div className="cart-div015">
                                         
-                                        <BarChart data={predictionData?.predictions || []}/>
+                                       <BarChart predictionData={predictionData?.predictions?.[0] || {}} />
                                              
                                         
                                     </div>
