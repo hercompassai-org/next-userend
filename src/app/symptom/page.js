@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Navication from '../components/Navication';
 import Footer from '../components/Footer';
-import GameBanner from '../components/GameBanner';
+import SymtomBanner from '../components/SymtomBanner';
 import Link from 'next/link';
 import MobileMenus from '../components/MobileMenus';
 import BubbleChart from '../components/BubbleChart';
@@ -14,7 +14,7 @@ export default function Symptom() {
   return (
     <>
       <Navication/>
-      <GameBanner/>
+      <SymtomBanner/>
       <main className="float-start w-100 main-body position-relative spacilas-card-bg">
          <section className="float-start w-100 mains-bodys01">
               <div className="container">

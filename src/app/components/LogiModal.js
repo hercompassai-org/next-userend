@@ -23,6 +23,7 @@ function LoginModal() {
 
   if (data.success) {
     localStorage.setItem("token", data.token); 
+    localStorage.setItem("userId", data.user._id);
     window.location.href = "/dashboard";
   } else {
     alert(data.message);
