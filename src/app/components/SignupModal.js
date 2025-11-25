@@ -8,19 +8,27 @@ function SignupModal() {
 
   const [formValues, setFormValues] = useState({});
 
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
+ const handleChange = (e) => {
+  const { name, value, type, checked } = e.target;
 
-    setFormValues((prev) => {
-      if (type === "checkbox") {
-        const arr = prev[name] || [];
-        if (checked) return { ...prev, [name]: [...arr, value] };
-        return { ...prev, [name]: arr.filter((v) => v !== value) };
-      }
+  setFormValues((prev) => {
+    // single checkbox (true/false)
+    if (type === "checkbox" && name === "partner_consent") {
+      return { ...prev, [name]: checked ? "yes" : "no" };
+    }
 
-      return { ...prev, [name]: value };
-    });
-  };
+    // checkbox groups (arrays)
+    if (type === "checkbox") {
+      const arr = prev[name] || [];
+      if (checked) return { ...prev, [name]: [...arr, value] };
+      return { ...prev, [name]: arr.filter((v) => v !== value) };
+    }
+
+    // text, email, password, etc
+    return { ...prev, [name]: value };
+  });
+};
+
 
   const nextStep = () => {
     if (currentStep < totalSteps) setCurrentStep(currentStep + 1);
