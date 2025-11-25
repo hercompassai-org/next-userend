@@ -23,7 +23,7 @@ export default function Dashboard() {
    const saveLog = async () => {
       const userId = localStorage.getItem("userId");
       const token = localStorage.getItem("token");
-      if (!userId) {
+      if (!userId || !token) {
          alert("User not logged in");
          return;
       }

@@ -497,9 +497,6 @@ function SignupModal() {
                     </div>
                   )}
 
-
-
-
                   {currentStep === 6 && (
                     <div className="step active">
                       <div className="bodys-parts-div015">
