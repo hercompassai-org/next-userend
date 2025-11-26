@@ -812,8 +812,32 @@ div.tags-bg015 {
     margin-bottom: 8px;
     color: #828282;
 }
+.invitation-pages .mian-acpts-text{
+  padding: 40px 0;
+}
+.invitation-pages .mian-acpts-text h3{ font-size: 25px; font-weight: 400;
+}
 .min-heights {
     height: 485px !important;
+}
+.user-id{
+  width: 70px;
+  height: 70px;
+  background: var(--button-color);
+  border-radius: 50px;
+  overflow: hidden;
+  display: grid;
+  align-content: center;
+  margin: auto;
+  text-align: center;
+  font-size: 25px;
+  color: var(--whitecolor);
+  line-height: 45px;
+}
+.invitation-pages .btn.btn-outline-secondary,
+.invitation-pages .btn.btn-success{
+  padding: 10px 25px;
+  border-radius: 12px;
 }
 .logoin-modals h2{ color: var(--head-text); font-weight: 700; font-size: 22px; }
 .logoin-modals p{ color: #b7b7b7; font-weight: 200; font-size: 15px; }
