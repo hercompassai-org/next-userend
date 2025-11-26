@@ -1234,3 +1234,116 @@ div.tags-bg015 {
   color: #fff;
   border-color: #ff66a3;
 }
+
+
+/* toggle */
+
+ .btn-toggle {
+	 margin: 0 4rem;
+	 padding: 0;
+	 position: relative;
+	 border: none;
+	 height: 1.5rem;
+	 width: 3rem;
+	 border-radius: 1.5rem;
+	 color: #6b7381;
+	 background: #bdc1c8;
+}
+ .btn-toggle:focus, .btn-toggle:focus.active, .btn-toggle.focus, .btn-toggle.focus.active {
+	 outline: none;
+}
+ .btn-toggle:before, .btn-toggle:after {
+	 line-height: 1.5rem;
+	 width: 4rem;
+	 text-align: center;
+	 font-weight: 600;
+	 font-size: .75rem;
+	 text-transform: uppercase;
+	 letter-spacing: 2px;
+	 position: absolute;
+	 bottom: 0;
+	 transition: opacity .25s;
+}
+ .btn-toggle:before {
+	 content: 'Off';
+	 left: -4rem;
+}
+ .btn-toggle:after {
+	 content: 'On';
+	 right: -4rem;
+	 opacity: .5;
+}
+ .btn-toggle > .handle {
+	 position: absolute;
+	 top: 0.1875rem;
+	 left: 0.1875rem;
+	 width: 1.125rem;
+	 height: 1.125rem;
+	 border-radius: 1.125rem;
+	 background: #fff;
+	 transition: left .25s;
+}
+ .btn-toggle.active {
+	 transition: background-color .25s;
+}
+ .btn-toggle.active {
+	 background-color: #29b5a8;
+}
+ .btn-toggle.active > .handle {
+	 left: 1.6875rem;
+	 transition: left .25s;
+}
+ .btn-toggle.active:before {
+	 opacity: .5;
+}
+ .btn-toggle.active:after {
+	 opacity: 1;
+}
+.recondsa ul{
+  list-style-type: none !important;
+  padding-left: 0 !important;
+}
+.recondsa.card ul{
+  margin-left: 0 !important;
+}
+.recondsa.card ul li{
+  margin-bottom: 0 !important;
+}
+.recondsa .nav-tabs .nav-link{
+  color: var(--head-text) !important;
+}
+.recondsa .nav-tabs .nav-link.active{
+  background: var(--button-color) !important;
+}
+.tables-contents01{
+  margin-bottom: 8px;
+  border-bottom: solid 1px #ececec;
+}
+.tables-contents01:last-child{
+  border-bottom: none !important;
+}
+.tables-contents01 h6{
+  font-size: 13px;
+  color: var(--lightcolor) !important;
+}
+.tables-contents01 h4{
+  font-size: 15px;
+}
+.tables-contents01 video{
+  width: 100%;
+}
+.tables-contents01 p{
+ 
+}
+.questions01 h5{
+  font-size: 16px;
+  font-weight: 600;
+}
+.crd-prtants01.w-100 {
+  min-height: 480px;
+}
+.crd-prtants01.card .card-body .rec-divbody{
+  height: 380px;
+  overflow: hidden;
+  overflow-y: auto;
+}
