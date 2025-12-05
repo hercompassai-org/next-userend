@@ -10,6 +10,7 @@ function Navication() {
     { id: 3, title: "How it work", link: "/howitwork" },
     { id: 4, title: "Pricing", link: "/pricing" },
     { id: 5, title: "Dashboard", link: "/dashboard" },
+    { id: 6, title: "Support Videos", link: "/support" },
   ];
 
   const pathname = usePathname();

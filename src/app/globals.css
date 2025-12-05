@@ -1347,3 +1347,16 @@ div.tags-bg015 {
   overflow: hidden;
   overflow-y: auto;
 }
+.video-card {
+  transition: all 0.25s ease-in-out;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.video-wrapper iframe,
+.video-wrapper video {
+  border-radius: 16px;
+}
