@@ -198,7 +198,7 @@ export default function Dashboard() {
 
          try {
             const res = await axios.get(
-               `https://node-backend-1xs8.onrender.com/api/users/dashboard/${userId}/insights`
+               "https://node-backend-1xs8.onrender.com/api/users/dashboard/${userId}/insights"
             );
             setInsights(res.data.insights);
          } catch (err) {
@@ -208,7 +208,7 @@ export default function Dashboard() {
 
       fetchInsights();
    }, []);
-
+  
    return (
       <>
          <Navication />
