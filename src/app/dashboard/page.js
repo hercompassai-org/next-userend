@@ -208,7 +208,23 @@ export default function Dashboard() {
 
       fetchInsights();
    }, []);
-  
+
+
+   useEffect(()=>{
+      const fetch = async()=>{
+         const userId = localStorage.getItem("userId");
+         if(!userId) return;
+         try{
+              const res= await axios.get(`api/insights`);
+              setInsights(res.data.insights);
+         }
+         catch(err){
+             console.error("Unable to load", err);
+         }
+      }
+      fetch();
+   },[]);
+   
    return (
       <>
          <Navication />
