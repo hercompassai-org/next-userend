@@ -19,6 +19,11 @@ export default function AcceptedPage() {
 
 
   useEffect(() => {
+  const token = localStorage.getItem("token");
+  if (token) {
+    window.location.href = "/partnerdashboard";
+    return;
+  }
     const params = new URLSearchParams(window.location.search);
     const t = params.get("token");
     setToken(t);
