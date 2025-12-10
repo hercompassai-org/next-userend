@@ -475,11 +475,11 @@ export default function Dashboard() {
                         <div className="card w-100">
                            <div className="card-body py-0">
                               <div className="row">
-                                 <div className="col-8">
+                                 <div className="col-lg-8">
                                     <h4 className="card-title">  Workouts & Meditation </h4>
                                     <p className="mt-2"> Adaptive workouts and guided meditations based on symptoms and goals. </p>
                                  </div>
-                                 <div className="col-4">
+                                 <div className="col-lg-4">
                                     <p> SCI: ACOG/NIH guidance </p>
                                  </div>
                               </div>
@@ -487,7 +487,7 @@ export default function Dashboard() {
 
 
                               <div className="row align-items-stretch mt-3">
-                                 <div className="col-8">
+                                 <div className="col-lg-8">
 
                                     <div className="bg-light p-4">
                                        <h4 className="card-title"> Suggested for tonight </h4>
@@ -506,7 +506,7 @@ export default function Dashboard() {
                                        <button type="button" className="btn btn-buy btn-primary mt-3"> View Routine </button>
                                     </div>
                                  </div>
-                                 <div className="col-4">
+                                 <div className="col-lg-4">
 
                                     <div className="bg-light p-3">
                                        <h4 className="card-title"> Couple Mode  </h4>
