@@ -17,31 +17,35 @@ export default function AcceptedPage() {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
-
   useEffect(() => {
-  const token = localStorage.getItem("token");
-  if (token) {
+  const loginToken = typeof window !== "undefined" 
+    ? localStorage.getItem("token") 
+    : null;
+
+  if (loginToken) {
+    console.log("User already logged in → redirecting...");
     window.location.href = "/partnerdashboard";
     return;
   }
-    const params = new URLSearchParams(window.location.search);
-    const t = params.get("token");
-    setToken(t);
+  const params = new URLSearchParams(window.location.search);
+  const t = params.get("token");
+  setToken(t);
 
-    fetch(`https://node-backend-1xs8.onrender.com/api/partner/validate/${t}`)
-      .then((res) => res.json())
-      .then((data) => {
-        if (!data.valid) {
-          setError("Invitation link has expired or is invalid.");
-          return;
-        }
+  fetch(`https://node-backend-1xs8.onrender.com/api/partner/validate/${t}`)
+    .then((res) => res.json())
+    .then((data) => {
+      if (!data.valid) {
+        setError("Invitation link has expired or is invalid.");
+        return;
+      }
 
-        setInviter(data.inviter?.full_name || "Someone");
-        setPartnerEmail(data.partner_email);
-      })
-      .catch(() => setError("Something went wrong"))
-      .finally(() => setLoading(false));
-  }, []);
+      setInviter(data.inviter?.full_name || "Someone");
+      setPartnerEmail(data.partner_email);
+    })
+    .catch(() => setError("Something went wrong"))
+    .finally(() => setLoading(false));
+}, []);
+
 
   const handleAccept = async () => {
     if (!password) {
