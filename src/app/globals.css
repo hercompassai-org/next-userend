@@ -854,6 +854,7 @@ div.tags-bg015 {
 /* dashboard */
 .dashborad-pages01{ background: #f9fafb; padding: 25px 10px;     padding-top: 137px; }
 
+.dashborad-pages01 .card-body input{ width: auto !important; }
 
 .dashborad-pages01 .card{  display: inline-block; box-shadow: #dadada 1px 2px 1px; padding-top: 20px; padding-bottom: 20px; border-radius: 12px; margin-bottom: 25px; }
 .dashborad-pages01 .card-title{ font-size: 18px; color: var(--head-text); font-weight: 700; }
